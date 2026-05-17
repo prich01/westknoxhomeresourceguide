@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West Knox Home Resource Guide | Summer 2026 Pilot</title>
+    <style>
+        :root {
+            --navy: #0B1B3D;
+            --gold: #C5A059;
+            --light-bg: #F9F9FB;
+            --dark-text: #22252A;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--navy);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+        header p {
+            color: var(--gold);
+            margin: 10px 0 0 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .intro-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--navy);
+        }
+        h2 {
+            color: var(--navy);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .stat-card {
+            background: var(--navy);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 6px;
+            border-bottom: 3px solid var(--gold);
+        }
+        .stat-card h3 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--gold);
+        }
+        .stat-card p {
+            margin: 5px 0 0 0;
+            font-size: 0.9rem;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--gold);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--navy);
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+        button {
+            background-color: var(--navy);
+            color: white;
+            border: 2px solid var(--gold);
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>West Knox Home Resource Guide</h1>
+        <p>A Local Father-Son Entrepreneurial Initiative</p>
+    </header>
+
+    <div class="container">
+        <div class="intro-box">
+            <h2>Summer 2026 Pilot Program</h2>
+            <p>We are putting 16 top-tier local service providers directly onto the kitchen counters of <strong>5,000 high-value homes</strong> in the Northshore, Pellissippi, and Choto corridors.</p>
+            <p>This is a premium, oversized 9x12 shared mailer printed on heavy 16pt matte cardstock, built to look like a trusted local directory, not junk mail.</p>
+        </div>
+
+        <h2>Why Partner With Us?</h2>
+        <ul>
+            <li><strong>Complete Industry Exclusivity:</strong> We only allow ONE business per category (e.g., one plumber, one landscaper). Lock out your competition completely.</li>
+            <li><strong>Dynamic QR Lead Tracking:</strong> Every ad features a custom QR code managed by our digital dashboard. We provide you with a full report showing exactly how many homeowners engaged with your business.</li>
+            <li><strong>Unmatched Local ROI:</strong> Reach targeted homes with an average value of $600k+ for just $450 out-of-the-box. That is less than 9 cents per high-value household.</li>
+        </ul>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>5,000</h3>
+                <p>Luxury Homes Mail Drop</p>
+            </div>
+            <div class="stat-card">
+                <h3>16 Only</h3>
+                <p>Exclusive Ad Slots</p>
+            </div>
+            <div class="stat-card">
+                <h3>100%</h3>
+                <p>Tracked via QR Analytics</p>
+            </div>
+        </div>
+
+        <h2>Secure Your Exclusive Category Slot</h2>
+        <p>Fill out the form below to check if your industry category is still available for the Summer 2026 mailing. Slots are reserved on a first-come, first-served basis.</p>
+        
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            <input type="hidden" name="subject" value="New West Knox Guide Inquiry">
+
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="business">Business Name</label>
+                <input type="text" id="business" name="business" required placeholder="Knoxville Plumbing Pros">
+            </div>
+            <div class="form-group">
+                <label for="category">Business Category</label>
+                <input type="text" id="category" name="category" required placeholder="e.g., HVAC, Landscaping, Roofing">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="865-555-5555">
+            </div>
+            <button type="submit">Check Category Availability</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 West Knox Home Resource Guide. All Rights Reserved.</p>
+        <p>Proudly operated as a local family business in Knox County, TN.</p>
+    </footer>
+
+</body>
+</html>
