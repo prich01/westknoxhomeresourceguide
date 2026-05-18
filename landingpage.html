@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Neighborhood Offer | West Knox Home Resource Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy: #0B1B3D;
+            --gold: #C5A059;
+            --light-bg: #F4F5F8;
+            --dark-text: #1C1E22;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        /* TOP NETWORK BAR: Verifies trust and connects back to your main brand */
+        .network-bar {
+            background-color: var(--navy);
+            color: #FFF;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .main-container {
+            max-width: 500px; /* Constrains the layout perfectly to look like a premium mobile app */
+            margin: 0 auto;
+            background: #FFF;
+            min-height: 100vh;
+            box-shadow: 0 0 30px rgba(0,0,0,0.05);
+        }
+
+        /* HERO ZONE: Displays the client's business identity */
+        .hero-section {
+            position: relative;
+            background: #FFF;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid #EAEAEA;
+        }
+
+        .business-logo {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .showcase-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        /* VENDOR OFFER BLOCK: The star of the page */
+        .offer-container {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .offer-badge {
+            display: inline-block;
+            background-color: rgba(197, 160, 89, 0.15);
+            color: #9A7736;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--navy);
+            font-size: 2.2rem;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .offer-description {
+            color: #5C626A;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            padding: 0 10px;
+        }
+
+        /* FRICTIONLESS CALL BUTTON: Instantly opens phone dialer */
+        .cta-call-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: var(--navy);
+            color: #FFF;
+            text-decoration: none;
+            padding: 18px 30px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border: 2px solid var(--gold);
+            box-shadow: 0 8px 25px rgba(11, 27, 61, 0.25);
+            transition: transform 0.2s, background-color 0.2s;
+            margin-bottom: 35px;
+        }
+
+        .cta-call-button:active {
+            transform: scale(0.98);
+            background-color: var(--gold);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #A0A5B0;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 35px;
+        }
+
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #E2E4E8;
+        }
+
+        .divider:not(:empty)::before { margin-right: .75em; }
+        .divider:not(:empty)::after { margin-left: .75em; }
+
+        /* BACKUP LEAD FORM: Minimalist luxury input style */
+        .form-heading {
+            font-family: 'Playfair Display', serif;
+            color: var(--navy);
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .form-subtext {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .lead-form {
+            text-align: left;
+            background: #F9F9FB;
+            padding: 25px 20px;
+            border-radius: 8px;
+            border-top: 4px solid var(--gold);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        /* Minimalist bottom-border lines instead of heavy gray boxes */
+        input {
+            width: 100%;
+            padding: 12px 4px;
+            border: none;
+            border-bottom: 2px solid #D2D5DD;
+            background: transparent;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--dark-text);
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-bottom-color: var(--navy);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: transparent;
+            color: var(--navy);
+            border: 2px solid var(--navy);
+            padding: 14px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+            transition: all 0.2s;
+        }
+
+        .submit-btn:active {
+            background-color: var(--navy);
+            color: #FFF;
+        }
+
+        .vendor-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #7A808C;
+            font-size: 0.9rem;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.8rem;
+            color: #9A9FA9;
+            background: #FFF;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="network-bar">
+            West Knox Home Resource Guide Verified Partner
+        </div>
+
+        <div class="hero-section">
+            <img src="logo.png" alt="Choto Elite Landscaping Logo" class="business-logo">
+            <img src="sample-mailer.png" alt="Premium Project Showcase" class="showcase-image">
+        </div>
+
+        <div class="offer-container">
+            <span class="offer-badge">Exclusive Kitchen-Counter Offer</span>
+            <h1>$100 Off Spring Landscape Packages</h1>
+            <p class="offer-description">Mention the West Knox Home Resource Guide or use the quick buttons below to claim your exclusive neighborhood discount with Choto Elite Landscaping.</p>
+
+            <a href="tel:8655555555" class="cta-call-button">
+                <span>📞</span> Tap to Call & Claim Offer
+            </a>
+
+            <div class="divider">Or Request a Callback</div>
+
+            <div class="lead-form">
+                <h3 class="form-heading">Secure Your Consultation</h3>
+                <p class="form-subtext">Don't have time for a phone call right now? Drop your details below and our team will get right back to you.</p>
+                
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Service Lead - West Knox Guide">
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(865) 555-5555">
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Booking Request</button>
+                </form>
+            </div>
+
+            <a href="https://example.com" target="_blank" class="vendor-link">Visit Choto Elite Landscaping Main Website</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 West Knox Home Resource Guide Network.</p>
+            <p>All featured offers are subject to terms listed by the independent contractor.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
