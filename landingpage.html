@@ -49,27 +49,31 @@
             box-shadow: 0 0 30px rgba(0,0,0,0.05);
         }
 
-        /* HERO ZONE: Displays the client's business identity */
+        /* HERO ZONE: Re-engineered to guarantee no clipping on any smartphone */
         .hero-section {
             position: relative;
             background: #FFF;
-            padding: 30px 20px;
+            padding: 0; /* Keeps it edge-to-edge */
             text-align: center;
             border-bottom: 1px solid #EAEAEA;
+            width: 100%; /* Forces the section to match the phone width */
+            overflow: hidden; /* Prevent any wild elements from creating horizontal scrollbars */
         }
 
         .business-logo {
-            max-width: 300px;
+            max-width: 150px; /* Sized slightly down for better vertical flow on mobile */
+            width: 40%;
             height: auto;
-            margin-bottom: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         .showcase-image {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            width: 100%;       /* Tells the graphic to match the phone screen exactly */
+            max-width: 100%;   /* Absolutely prohibits it from expanding beyond the boundary */
+            height: auto !important; /* Forces the aspect ratio to remain perfect, eliminating cutoffs */
+            display: block;    
+            border-radius: 0;  
         }
 
         /* VENDOR OFFER BLOCK: The star of the page */
