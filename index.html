@@ -137,6 +137,26 @@
             95% { margin-left: -300%; }
             100% { margin-left: 0%; }
         }
+        /* NEW STYLES: RESPONSIVE YOUTUBE EMBED */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px; /* Pushes the section below it down nicely */
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
         form {
             background: white;
@@ -207,6 +227,14 @@
     <p>We establish a direct line between a select group of top-tier local experts and <strong>targeted, high-value households</strong> throughout West Knoxville's premier corridors.</p>
     <p>Printed on heavy 16pt luxury matte cardstock, this oversized 9x12 shared showcase is designed to sit proudly on kitchen counters as a permanent, trusted neighborhood resource. With strict category exclusivity, this is your opportunity to position your brand as the neighborhood's go-to specialist and lock out your competition completely.</p>
 </div>
+        <div class="video-container">
+            <iframe 
+                src="https://youtu.be/Bw5cN6BQiM0" 
+                title="West Knox Home Resource Guide Video" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
 
         <h2>Why Partner With Us?</h2>
         <ul>
